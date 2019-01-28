@@ -1,31 +1,30 @@
-
 exports.users = [
     {
-        "_id": 1,
+        "id": 1,
         "name": "Dale Cooper",
         "occupation": "FBI Agent",
         "avatar": "https://upload.wikimedia.org/wikipedia/en/5/50/Agentdalecooper.jpg"
     },
     {
-        "_id": 2,
+        "id": 2,
         "name": "Spike Spiegel",
         "occupation": "Bounty Hunter",
         "avatar": "http://vignette4.wikia.nocookie.net/deadliestfiction/images/d/de/Spike_Spiegel_by_aleztron.jpg/revision/latest?cb=20130920231337"
     },
     {
-        "_id": 3,
+        "id": 3,
         "name": "Wirt",
         "occupation": "adventurer",
         "avatar": "http://66.media.tumblr.com/5ea59634756e3d7c162da2ef80655a39/tumblr_nvasf1WvQ61ufbniio1_400.jpg"
     },
     {
-        "_id": 4,
+        "id": 4,
         "name": "Michael Myers",
         "occupation": "Loving little brother",
         "avatar": "http://vignette2.wikia.nocookie.net/villains/images/e/e3/MMH.jpg/revision/latest?cb=20150810215746"
     },
     {
-        "_id": 5,
+        "id": 5,
         "name": "Dana Scully",
         "occupation": "FBI Agent",
         "avatar": "https://pbs.twimg.com/profile_images/718881904834056192/WnMTb__R.jpg"
@@ -34,7 +33,7 @@ exports.users = [
 
 exports.products = [
   {
-    "_id": 1,
+    "id": 1,
     "name": "Body Luxuries Sweet Lavender Hand Sanitizer",
     "description": "Makes your hands clean",
     "rating": 2,
@@ -85,7 +84,7 @@ exports.products = [
     ]
   },
   {
-    "_id": 2,
+    "id": 2,
     "name": "Topiramate",
     "description": "A wonderful medicine that makes everything all better",
     "rating": 2,
@@ -116,7 +115,7 @@ exports.products = [
     ]
   },
   {
-    "_id": 3,
+    "id": 3,
     "name": "Almond",
     "description": "A great treat that tastes great",
     "rating": 5,
@@ -139,7 +138,7 @@ exports.products = [
     ]
   },
   {
-    "_id": 4,
+    "id": 4,
     "name": "VYTORIN",
     "description": "Orchard as the place of occurrence of the external cause",
     "rating": 3,
@@ -162,7 +161,7 @@ exports.products = [
     ]
   },
   {
-    "_id": 5,
+    "id": 5,
     "name": "Decolorized Iodine",
     "description": "Kills germs on contact",
     "rating": 1,
@@ -185,7 +184,7 @@ exports.products = [
     ]
   },
   {
-    "_id": 6,
+    "id": 6,
     "name": "Fresh Sugar Honey Tinted Lip Treatment SPF15",
     "description": "Fix those chapped lips. ",
     "rating": 3,
@@ -208,7 +207,7 @@ exports.products = [
     ]
   },
   {
-    "_id": 7,
+    "id": 7,
     "name": "LBel",
     "description": "2-Propanol",
     "rating": 3,
@@ -231,7 +230,7 @@ exports.products = [
     ]
   },
   {
-    "_id": 8,
+    "id": 8,
     "name": "Cholestyramine",
     "description": "Help reduce cholesteral in the system",
     "rating": 3,
@@ -254,7 +253,7 @@ exports.products = [
     ]
   },
   {
-    "_id": 9,
+    "id": 9,
     "name": "Risperidone",
     "description": "cephalospor/oth beta-lactm antibiot, undet, sequela",
     "rating": 1,
@@ -277,7 +276,7 @@ exports.products = [
     ]
   },
   {
-    "_id": 10,
+    "id": 10,
     "name": "MAC",
     "description": "Other Gram-negative sepsis",
     "rating": 2,
