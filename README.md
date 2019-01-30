@@ -3,10 +3,10 @@ Let's build a web server using the express framework.
 
 
 ## Part 1. Use the express built in REST methods
-* Give your server the ability to respond to a GET request with a path "/users" and return the users array from state.js
-* Give your server the ability to respond to a GET request with a path "/users/1" and return the first user object from the users array from state.js
-* Give your server the ability to respond to a POST request with a path "/users" and just add a hard coded user object to the users array from state.js. .json() the last user in the array to send it back to the client. (if you do another GET request you should see this added)
-* Give your server the ability to respond to a PUT request with a path "/users/1" and just change any key value on the first user object in the users array in state.js. .json() this user to send it back to the client.
+***1 Give your server the ability to respond to a GET request with a path "/users" and return the users array from state.js
+***2 Give your server the ability to respond to a GET request with a path "/users/1" and return the first user object from the users array from state.js
+***3 Give your server the ability to respond to a POST request with a path "/users" and just add a hard coded user object to the users array from state.js. .json() the last user in the array to send it back to the client. (if you do another GET request you should see this added)
+***4 Give your server the ability to respond to a PUT request with a path "/users/1" and just change any key value on the first user object in the users array in state.js. .json() this user to send it back to the client.
 * Give your server the ability to respond to a DELETE request with a path "/users/1" and remove one item from the users array. send() back a messsage "deleted"
 
 
