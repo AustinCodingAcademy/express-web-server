@@ -16,8 +16,10 @@ app.get('/users/1', (req,res,next) => {
     res.json(users[0]);
 });
 //3
+//6
 app.post('/users', (req,res,next) => {
     let user = req.body;
+    user.id = findHighestId();
     users.push(user);
     res.json(user);
 });
@@ -35,9 +37,8 @@ app.delete('/users/:id', (req,res,next) => {
 });
 
 app.get('/users/:id', (req,res,next) => {
-    //theidfromthepath & id are variables created by John
-    //colon is magic character
-    res.json({theidfromthepath:req.params.id})
+    let user = users.find(u=> u.id == req.params.id);
+    res.json({user});
 });
 
 app.listen(3002, (err) => {
@@ -47,3 +48,9 @@ app.listen(3002, (err) => {
  console.log("Web server is now listening for messages", err);
 });
 
+// 7/8
+function findHighestId(){
+    let idArray = [];
+    users.forEach(u => idArray.push(u.id));
+    return Math.max(...idArray) +1;
+}

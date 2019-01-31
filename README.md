@@ -11,9 +11,9 @@ Let's build a web server using the express framework.
 
 
 ## Part 2. Add the body-parser module to your project
-* Give your server the ability to handle a POST request with a path "/users" and add the data from the client to the users array
-* Assign an _id property to the user object that is a number that increments by 1 each time.
-* response.json() the user object to send it back to the client. (if you do another GET request you should see this added)
+***6 Give your server the ability to handle a POST request with a path "/users" and add the data from the client to the users array
+***7 Assign an _id property to the user object that is a number that increments by 1 each time.
+***8 response.json() the user object to send it back to the client. (if you do another GET request you should see this added)
 
 ## Part 3. Use path variables
 * Give your server the ability to respond to a GET request with a path `/users/:userId` and return the user object from the users array that has the _id == userId
