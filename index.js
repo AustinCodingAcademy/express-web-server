@@ -15,11 +15,17 @@ const getUsers = (request,response) => {
 }
 
 const getProduct = (request,response) => {
-  response.json(producets[request.params.index])
+  const foundObject = products.find( item => {
+    return item.id == request.params.userId
+  })
+  foundObject ? response.json(foundObject) : response.send("Not Found")
 }
 
 const getUser = (request,response) => {
-  response.json(users[Number(request.params.index)-1])
+  const foundObject = users.find( user => {
+    return user.id == request.params.userId
+  })
+  foundObject ? response.json(foundObject) : response.send("Not Found")
 }
 
 const postUser = (request,response) => {
@@ -38,26 +44,55 @@ const postProduct = (request,response) => {
 
 const putUser = (request,response) => {
   const tempBody = request.body
-  tempBody.id = users[request.params.index-1].id
-  users[request.params.index-1] = tempBody
-  response.json(tempBody)
+  const foundindex = users.findIndex( user => {
+    return user.id == request.params.userId
+  })
+  if(foundindex>-1){
+    tempBody.id = users[foundindex].id
+    users[foundindex]= tempBody
+    response.json(tempBody)
+  }else{
+    response.send("Not Found")
+  }
 }
 
 const putProduct = (request,response) => {
   const tempBody = request.body
-  tempBody.id = producets[request.params.index-1].id
-  producets[request.params.index-1]= tempBody
-  response.json(tempBody)
+  const foundindex = products.findIndex( user => {
+    return user.id == request.params.userId
+  })
+  if(foundindex>-1){
+    tempBody.id = producets[foundindex].id
+    producets[foundindex]= tempBody
+    response.json(tempBody)
+  }else{
+    response.send("Not Found")
+  }
 }
 
 const deleteUser = (request,response) => {
-  users.splice(Number(request.params.index)-1,1)  
-  response.json("deleted")
+  const foundindex = users.findIndex( user => {
+    return user.id == request.params.userId
+  })
+  if(foundindex>-1){
+    users.splice(foundindex,1)  
+    response.send("deleted")
+  }else{
+    response.send("Not Found")
+  }
+
 }
 
 const deleteProduct = (request,response) => {
-  producets.splice(Number(request.params.index)-1,1)  
-  response.json("deleted")
+  const foundindex = products.findIndex( user => {
+    return user.id == request.params.userId
+  })
+  if(foundindex>-1){
+    products.splice(foundindex,1)  
+    response.send("deleted")
+  }else{
+    response.send("Not Found")
+  }
 }
 
 
@@ -66,21 +101,21 @@ app.get('/users', getUsers)
 
 app.get('/products', getProducts)
 
-app.get('/users/:index', getUser)
+app.get('/users/:userId', getUser)
 
-app.get('/products/:index', getProduct)
+app.get('/products/:userId', getProduct)
 
 app.post('/users',postUser)
 
 app.post('/products',postProduct)
 
-app.put('/users/:index',putUser)
+app.put('/users/:userId',putUser)
 
-app.put('/products/:index',putProduct)
+app.put('/products/:userId',putProduct)
 
-app.delete('/users/:index',deleteUser)
+app.delete('/users/:userId',deleteUser)
 
-app.delete('/products/:index',deleteProduct)
+app.delete('/products/:userId',deleteProduct)
 
 
 app.listen(3002, (err) => {
