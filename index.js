@@ -8,30 +8,36 @@ const app = express();
 app.use(bodyParser.json());
 
 //1
-app.get('/users', (request,response,next) => {
-    response.json(users);
+app.get('/users', (req,res,next) => {
+    res.json(users);
 });
 //2
-app.get('/users/1', (request,response,next) => {
-    response.json(users[0]);
+app.get('/users/1', (req,res,next) => {
+    res.json(users[0]);
 });
 //3
-app.post('/users', (request,response,next) => {
-    let user = request.body;
+app.post('/users', (req,res,next) => {
+    let user = req.body;
     users.push(user);
-    response.json(user);
+    res.json(user);
 });
 //4
-app.put('/users/1', (request,response,next) => {
-    let user = request.body;
+app.put('/users/1', (req,res,next) => {
+    let user = req.body;
     users[0] = user;
-    response.json(user);
+    res.json(user);
+});
+//5
+app.delete('/users/:id', (req,res,next) => {
+    let index = users.findIndex(u=> u.id == req.params.id)
+    users.splice(index,1);    
+    res.send('Deleted');
 });
 
-app.get('/contacts/:id', (request,response,next) => {
+app.get('/users/:id', (req,res,next) => {
     //theidfromthepath & id are variables created by John
     //colon is magic character
-    response.json({theidfromthepath:request.params.id})
+    res.json({theidfromthepath:req.params.id})
 });
 
 app.listen(3002, (err) => {
