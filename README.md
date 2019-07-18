@@ -1,5 +1,5 @@
 # Express Server
-Let's build a web server using the express framework.
+Let's build a web server using the express framework. This is pretty much the same thing as the node-web-server, just using express. Do each part completely before starting the next part. You don't need to keep the code from the previous part or you can do each part in seperate files. This is not for a grade.
 
 
 ## Part 1. Use the express built in REST methods
