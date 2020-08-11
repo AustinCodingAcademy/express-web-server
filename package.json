@@ -1,0 +1,23 @@
+{
+  "name": "express-web-server",
+  "version": "1.0.0",
+  "description": "Let's build a web server using the express framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drisser/express-web-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drisser/express-web-server/issues"
+  },
+  "homepage": "https://github.com/drisser/express-web-server#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}
