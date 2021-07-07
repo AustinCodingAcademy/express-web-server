@@ -31,6 +31,23 @@ exports.users = [
     }
 ]
 
+exports.inActiveUsers = [
+  {
+    "id": 836,
+    "name": "Dick Trickle",
+    "occupation": "Fast Boy",
+    "avatar": "https://pbs.twimg.com/profile_images/718881904834056192/WnMTb__R.jpg",
+    "isActive": false
+  },
+  {
+    "id": 923,
+    "name": "Howard Edward Butt Sr.",
+    "occupation": "Bag Boy",
+    "avatar": "https://pbs.twimg.com/profile_images/718881904834056192/WnMTb__R.jpg",
+    "isActive": false
+  },
+];
+
 exports.products = [
   {
     "id": 1,
